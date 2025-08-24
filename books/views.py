@@ -1,6 +1,7 @@
+from .models import Author, Book
 from rest_framework import viewsets
-from models import Author, Book
-from serializer import AuthorSerializer, BookSerializer
+from .serializer import AuthorSerializer, BookSerializer
+
 
 class AuthorViewSet(viewsets.ModelViewSet):
     queryset = Author.objects.all()
@@ -10,7 +11,3 @@ class AuthorViewSet(viewsets.ModelViewSet):
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-
-
-
-

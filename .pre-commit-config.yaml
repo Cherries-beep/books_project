@@ -1,0 +1,11 @@
+repos:
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.12.0  # последняя версия на момент настройки
+    hooks:
+      - id: isort
+
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.7.0  # последняя версия на момент настройки
+    hooks:
+      - id: autopep8
+        args: ["--aggressive", "--aggressive"]
