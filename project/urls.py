@@ -10,8 +10,5 @@ urlpatterns = [
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
 
     # Swagger через CDN
-    path("api/docs/", SpectacularSwaggerView.as_view(
-        url_name="schema",
-        template_name=None  # <- вот тут ключ
-    ), name="swagger-ui"),
+    path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema", template_name=None), name="swagger-ui"),
 ]
